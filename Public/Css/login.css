@@ -1,0 +1,16 @@
+<style type="text/css">
+	
+*{
+	margin:0px;
+	padding:0px;
+}
+form{
+	border: 1px solid gray;
+	width:300px;
+	margin:0px auto;
+	padding:10px;
+}
+.submit{
+	cursor:pointer;
+}
+</style>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<foreach name="list" item="vo">
+		<table>
+			<tr>
+				<td>留言标题:{$vo.title}</td>
+			</tr>
+			<tr>
+				<td>留言内容:{$vo.content}</td>
+			</tr>
+			<tr>
+				<td>留言时间:{$vo.time|date="Y m d H:i:s",###}</td>
+			</tr>
+			<tr>
+				<td>留言人:{$vo.uname}</td>
+			</tr>
+			<tr>
+				<td>附件名:{$vo.filename}</td>
+			</tr>
+		</table>
+		<hr/>
+	</foreach>
+	{$page}
+</body>
+</html>
