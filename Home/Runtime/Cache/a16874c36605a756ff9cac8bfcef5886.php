@@ -1,0 +1,74 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<!-- -->
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/register.css" />
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.9.0.main.js"></script>
+	<script type="text/javascript">
+		var error = new Array();
+		error['isRegister'] = 1;
+		$(function() {
+			$("input[name='username']").blur(function() {
+				/* Act on the event */
+				username = $(this).val();
+				//alert($username);
+				$.get("__URL__/checkname",{'username':username},function(data){
+					if(data=="该用户已经存在"){
+						error['isRegister'] = 0;
+						$("input[name='username']").after("<p style='color:red' id='umessage'>该用户名已经存在!</p>");
+					}else{
+						error['isRegister'] = 1;
+						$('#umessage').remove();
+					}
+				});
+			});
+			$("#img_register").click(function(event) {
+				/* Act on the event */
+				if(error['isRegister']){
+					$("form[name='form']").submit();
+				}else{
+					return false;
+				}
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<form action="__URL__/doRegister" method="post" name="form">
+		<table>
+			<tr>
+			<td>用&nbsp;&nbsp;名<input type="text" name="username"></td>
+			</tr>
+			<tr>
+			<td>密&nbsp;&nbsp;码<input type="password" name="password"></td>
+			</tr>
+			<tr>
+			<tr>
+			<td>确认密码<input type="password" name="repassword"></td>
+			</tr>
+			<tr>
+				<td>性&nbsp;&nbsp;别:
+					<input type="radio" name="sex" value="1" checked="checked">男
+					<input type="radio" name="sex" value='0'>女</input>
+				</td>
+			</tr>
+			<tr>
+			<td>验 证 码<input type="text" name="code"　></td>
+			<!-- <td>
+				<img src='__APP__/Public/code?width=30&height=30' onclick='this.src=this.src+'?'+Math.random()'>
+			</td> -->
+			<td><img src="__APP__/Public/code?width=30&height=20" onclick="this.src=this.src+'?'+Math.random()"></td>
+			</tr>
+			<tr>
+				<td>
+				<img id='img_register' class="submit" src="__PUBLIC__/Images/register.gif" onclick="register">
+				<img id='img_reset' class="submit" src='__PUBLIC__/Images/reset.gif' onclick="login()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
