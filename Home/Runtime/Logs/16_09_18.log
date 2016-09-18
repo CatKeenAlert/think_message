@@ -1,0 +1,49 @@
+[ 2016-09-18T09:38:04+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=test1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.045698s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'test1' ) LIMIT 1   [ RunTime:0.007052s ]
+
+[ 2016-09-18T09:38:45+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=test02
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.000757s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'test02' ) LIMIT 1   [ RunTime:0.000268s ]
+
+[ 2016-09-18T09:41:20+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=test03
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.001105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'test03' ) LIMIT 1   [ RunTime:0.000335s ]
+
+[ 2016-09-18T09:43:25+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=weqweq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.000940s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'weqweq' ) LIMIT 1   [ RunTime:0.000292s ]
+
+[ 2016-09-18T09:56:37+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=test02
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.001159s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'test02' ) LIMIT 1   [ RunTime:0.000446s ]
+
+[ 2016-09-18T09:57:10+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=test03
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.000872s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'test03' ) LIMIT 1   [ RunTime:0.000264s ]
+
+[ 2016-09-18T10:14:45+08:00 ] 127.0.0.1 /index.php/Register/checkname?username=test03
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.001037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` WHERE ( `username` = 'test03' ) LIMIT 1   [ RunTime:0.000797s ]
+

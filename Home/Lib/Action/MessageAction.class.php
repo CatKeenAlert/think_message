@@ -16,9 +16,11 @@ class MessageAction extends Action{
 		}
 		// 保存表单数据 包括附件数据
 		$message->filename = $info[0]['savename'];
-		// $message->time = time();
-		// $message->uid = $_SESSION['id'];
-		// var_dump($message);
+        //dump($message->filename);
+		 //$message->time = time();
+		 //$message->uid = $_SESSION['id'];
+         dump($message->uid);
+		 //var_dump($message);
 		// exit;
 		$lastId = $message->add(); // 写入用户数据到数据库
 		if($lastId){
